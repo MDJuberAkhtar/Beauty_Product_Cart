@@ -1,38 +1,256 @@
-.App {
+body{
+  padding: 0px;
+  margin: 0px;
+}
+/* side bar*/
+.top-color{
+  text-align: center;
+  padding:  10px 10px;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+.top-color:hover{
+  border-bottom: 1px solid #fff;
+}
+.noitem{
+  text-align: center;
+  margin: 50px 50px;
+
+}
+.topmove{
+  margin-top: 20px;
+}
+.tophr{
+  color: white;
+  border-bottom: 1px solid white;
+}
+.topbar {
+    width:  100%;
+    padding-left: 20px;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    height:  500px;
+    position: fixed;
+    z-index: 200;
+    top: -100%;
+    animation: slide-opend 1.25s forwards;
+}
+.topbar.close{
+  top: 0;
+  animation: slide-closeded 1.0s forwards;
+}
+
+
+@keyframes slide-opend  {
+  100% {top: 0}
+}
+
+@keyframes slide-closed  {
+  100% {top: -100%}
+}
+
+/* side bar*/
+.sidebar {
+    height: 100vh;
+    padding-left: 20px;
+    background-color: #F1F0E8;
+    opacity: 0.8;
+    color: black;
+    width: 600px;
+    position: fixed;
+    z-index: 200;
+    left: -100%;
+    animation: slide-open 0.75s forwards;
+}
+
+.sidebar.close{
+  left: 0;
+  animation: slide-closed 1.0s forwards;
+}
+
+@keyframes slide-open  {
+  100% {left: 0}
+}
+@keyframes slide-closed  {
+  100% {left: -100%}
+}
+/* side nav bar*/
+.sidenavbar {
+    height: 100vh;
+    padding-left: 20px;
+    background-color: #F1F0E8;
+    opacity: 0.9;
+    color: black;
+    width: 400px;
+    position: fixed;
+    z-index: 200;
+    left: -100%;
+    animation: slide-open 0.75s forwards;
+}
+.sidenavbar.close{
+  left: 0;
+  animation: slide-closed 1.0s forwards;
+}
+/*cross*/
+
+.movecross{
+  float: right;
+  padding: 10px;
+}
+
+.movecrosstop{
+  float: right;
+  padding: 10px;
+}
+.moveform{
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#toggle {
+    cursor: pointer;
+    color: black;
+    font-size: 60px;
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    float: right;
+}
+/* litle header */
+.topnavs {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.topnavs a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnavs a:hover {
+  border-bottom: 1px solid black;
+}
+.topnavs a.active {
+  border-bottom: 1px solid black;
+}
+
+.aseb{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.forms{
+  margin: 10px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navlink{
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 2s;
+}
+
+.navlink:hover {
+  border-bottom: 1px solid #000;
+}
+
+
+/* landing page */
+/*1st*/
+
+
+.image{
+  width: 400px;
+  height: 500px;
+  float: right;
+}
+
+.hrfat{
+  border: 2px solid #000;
+
+}
+
+.lightColor{
+  color: #909090;
+}
+
+.buttonSubmit{
+  display: block;
+  background-color: #404040;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 2s;
+}
+
+.buttonSubmit:hover{
+  background-color: #000;
+  text-decoration: none;
+}
+/*2nd*/
+.grid-containerSec {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item-sec {
+  font-size: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.imagesec{
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imagecrosal{
+  margin-top: 20px;
+  width: 300px;
+  height:400px;
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input{
+  float: left;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: grey;
+}
+
+input:focus{
+  border-color: green;
+  outline: 1px 0 #000
+}
+
+.lil{
+  margin-top: 10px;
+}
+
+.footend{
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.frtag{
+  float: left;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fltag{
+  float: right;
 }
